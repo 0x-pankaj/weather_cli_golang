@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-const API_KEY = "d1a89e10ca02435"
+const API_KEY = "d1a89e10ca024356b7"
 
 type Weather struct {
 	Location struct {
@@ -26,45 +26,26 @@ type Weather struct {
 	} `json:"current"`
 	ForeCast struct {
 		Forecastday []struct {
-			Day struct {
-				Maxtemp string `json:"maxtemp_c"`
-				Mintemp string `json:"mintemp_c"`
-				RainP   string `json:"daily_chance_of_rain"`
-			} `json:"day"`
-			Astro struct {
-				Sunrise   string `json:"sunrise"`
-				Sunset    string `json:"sunset"`
-				MoonPhase string `json:"moon_phase"`
-			} `json:"astro"`
 			Hour []struct {
-				Time      string `json:"time"`
-				TempC     string `json:"temp_c"`
+				Time      string  `json:"time"`
+				TempC     float64 `json:"temp_c"`
 				Condition struct {
 					Text string `json:"text"`
 				} `json:"condition"`
-				WindD string `json:"wind_dir"`
-				Rain  int    `json:"chance_of_rain"`
+				Rain int `json:"chance_of_rain"`
 			} `json:"hour"`
 		} `json:"forecastday"`
 	} `json:"forecast"`
 }
 
 func main() {
-	fmt.Println("weather cli")
+	// fmt.Println("weather cli")
 
 	res, err := http.Get("http://api.weatherapi.com/v1/forecast.json?key=" + API_KEY + "&q=Kathmandu")
 	if err != nil {
 		panic(err)
 	}
 	defer res.Body.Close()
-
-	// resp, err := http.Get("http://api.weatherapi.com/v1/forecast.json?key=" + API_KEY + "&q=Kathmandu")
-	// if err != nil {
-	// 	panic(err)
-	// }
-
-	// b, err := io.ReadAll(resp.Body)
-	// fmt.Println(string(b))
 
 	if res.StatusCode != 200 {
 		panic("Weather Api not Available")
@@ -84,9 +65,25 @@ func main() {
 		panic("error while Unmarshal json")
 	}
 
-	fmt.Println(weather)
-	// city, time, temp, cond := weather.Location.Name, weather.Location.LocalTime, weather.Current.Temp_c, weather.Current.Condition.Text
+	/*
+		weatherJSON, err := json.MarshalIndent(weather, "", "\t")
+		fmt.Println(string(weatherJSON))
+	*/
 
-	// fmt.Printf("%s, %s, %.0fC, %s, \n ", city, time, temp, cond)
+	location, current, hours := weather.Location, weather.Current, weather.ForeCast.Forecastday[0].Hour
+
+	// kathmandu, nepal : temp, condition
+	fmt.Printf(" %s, %s, : %.0fC, %s  \n", location.Name, location.Country, current.Temp_c, current.Condition.Text)
+
+	// fmt.Println(hours)
+	for _, val := range hours {
+		// t, err := time.Parse("2024-02-09 00:00", val.Time)
+		// if err != nil {
+		// 	panic("Error parsing time")
+		// }
+		// formattedTime := t.Format("00:00")
+		// fmt.Println(val)
+		fmt.Printf("Time: %s , Temp: %.0fC , Cond: %s , RainChance: %d \n", val.Time, val.TempC, val.Condition.Text, val.Rain)
+	}
 
 }

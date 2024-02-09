@@ -1,0 +1,240 @@
+{
+  "location": {
+    "name": "Kathmandu",
+    "country": "Nepal",
+    "localtime": "2024-02-09 14:57"
+  },
+  "current": {
+    "last_updated": "2024-02-09 14:45",
+    "temp_c": 18,
+    "condition": {
+      "text": "Partly cloudy"
+    },
+    "wind_kph": 6.1,
+    "humidity": 37
+  },
+  "forecast": {
+    "forecastday": [
+      {
+        "hour": [
+          {
+            "time": "2024-02-09 00:00",
+            "temp_c": 3.5,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "ESE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 01:00",
+            "temp_c": 3.5,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "ESE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 02:00",
+            "temp_c": 3.3,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "ESE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 03:00",
+            "temp_c": 3.3,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "ESE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 04:00",
+            "temp_c": 3.1,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "ESE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 05:00",
+            "temp_c": 3,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "SE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 06:00",
+            "temp_c": 2.8,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "SE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 07:00",
+            "temp_c": 7,
+            "condition": {
+              "text": "Sunny"
+            },
+            "wind_dir": "SE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 08:00",
+            "temp_c": 10.7,
+            "condition": {
+              "text": "Sunny"
+            },
+            "wind_dir": "ESE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 09:00",
+            "temp_c": 13.2,
+            "condition": {
+              "text": "Sunny"
+            },
+            "wind_dir": "ENE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 10:00",
+            "temp_c": 15.3,
+            "condition": {
+              "text": "Sunny"
+            },
+            "wind_dir": "SW",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 11:00",
+            "temp_c": 16.8,
+            "condition": {
+              "text": "Sunny"
+            },
+            "wind_dir": "WSW",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 12:00",
+            "temp_c": 17.7,
+            "condition": {
+              "text": "Sunny"
+            },
+            "wind_dir": "W",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 13:00",
+            "temp_c": 18.1,
+            "condition": {
+              "text": "Sunny"
+            },
+            "wind_dir": "W",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 14:00",
+            "temp_c": 18,
+            "condition": {
+              "text": "Partly cloudy"
+            },
+            "wind_dir": "E",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 15:00",
+            "temp_c": 17.4,
+            "condition": {
+              "text": "Sunny"
+            },
+            "wind_dir": "WSW",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 16:00",
+            "temp_c": 16.1,
+            "condition": {
+              "text": "Sunny"
+            },
+            "wind_dir": "WSW",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 17:00",
+            "temp_c": 9.7,
+            "condition": {
+              "text": "Sunny"
+            },
+            "wind_dir": "SW",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 18:00",
+            "temp_c": 6.7,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "SSW",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 19:00",
+            "temp_c": 5.6,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "S",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 20:00",
+            "temp_c": 5.2,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "S",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 21:00",
+            "temp_c": 4.9,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "SE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 22:00",
+            "temp_c": 4.8,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "NE",
+            "chance_of_rain": 0
+          },
+          {
+            "time": "2024-02-09 23:00",
+            "temp_c": 4.5,
+            "condition": {
+              "text": "Clear "
+            },
+            "wind_dir": "ESE",
+            "chance_of_rain": 0
+          }
+        ]
+      }
+    ]
+  }
+}
