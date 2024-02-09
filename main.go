@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 )
 
 const API_KEY = "d1a89e10ca024356b7"
@@ -40,8 +41,13 @@ type Weather struct {
 
 func main() {
 	// fmt.Println("weather cli")
+	q := "kathmandu"
 
-	res, err := http.Get("http://api.weatherapi.com/v1/forecast.json?key=" + API_KEY + "&q=Kathmandu")
+	if len(os.Args) >= 2 {
+		q = os.Args[1]
+	}
+
+	res, err := http.Get("http://api.weatherapi.com/v1/forecast.json?key=" + API_KEY + "&q=" + q + "")
 	if err != nil {
 		panic(err)
 	}
@@ -83,7 +89,7 @@ func main() {
 		// }
 		// formattedTime := t.Format("00:00")
 		// fmt.Println(val)
-		fmt.Printf("Time: %s , Temp: %.0fC , Cond: %s , RainChance: %d \n", val.Time, val.TempC, val.Condition.Text, val.Rain)
+		fmt.Printf(" %s -  %.0fC , Cond: %s  - %d \n", val.Time, val.TempC, val.Condition.Text, val.Rain)
 	}
 
 }
