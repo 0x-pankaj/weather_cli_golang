@@ -1,5 +1,10 @@
 #clone above repo 
 ```
+git clone https://github.com/0x-pankaj/weather_cli_golang.git
+```
+then 
+
+```
 go build 
 ```
 inside same directory
